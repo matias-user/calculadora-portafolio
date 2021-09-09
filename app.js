@@ -20,7 +20,7 @@ const agregarAlArray = ( e )=>{
     console.log(arrayBotones);
     
 }
-/*TODO En esta funcion puedo comprobar cuantos operadores hay
+/* En esta funcion puedo comprobar cuantos operadores hay
 para saber cuantos parejas de numeros hay en el array */
 const cuantosOperadores = ( array = [] ) =>{
     let contador = 0;                                       
@@ -38,17 +38,18 @@ con un foraech y un if se filtra en dos arrays a los numeros y los operadores
 */
 const separarParejasNums = ( array = [] ) => {
 
-    let valor = 0;
+    let valor ;
     array.forEach( item => {
         if( item > 0 || item < 10){//No entiendo por que se agrega el 0 cuando se presiona
-            valor += item;          //un operador.
-            parejasNumeros.push(valor);
+            valor += item;          //Aqui se trata como string.
         }                              
         else{
             arrayOperadores.push(item);
             valor = 0;
         }
+        
     } )
+    // parejasNumeros.push(valor);
     console.log(parejasNumeros);
     console.log(arrayOperadores);     
 }
